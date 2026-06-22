@@ -1,0 +1,47 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=\"$CLAUDE_TOOL_INPUT_FILE_PATH\"; if [[ \"$file\" =~ \\.(html|css|tsx|jsx|ts|js|svelte|vue)$ ]]; then echo \"[router] UI file modified: $file — /impeccable check recommended\"; fi"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"[AGI OS] Session complete. Run /caveman-stats to check token efficiency.\""
+          }
+        ]
+      }
+    ]
+  },
+  "mcpServers": {
+    "n8n": {
+      "command": "npx",
+      "args": ["-y", "n8n-mcp"],
+      "env": {
+        "N8N_API_URL": "${N8N_API_URL}",
+        "N8N_API_KEY": "${N8N_API_KEY}"
+      },
+      "disabled": true,
+      "_note": "Set N8N_API_URL and N8N_API_KEY env vars, then flip disabled to false"
+    },
+    "voicenotes": {
+      "command": "npx",
+      "args": ["-y", "@voicenotes/mcp"],
+      "env": {
+        "VOICENOTES_API_KEY": "${VOICENOTES_API_KEY}"
+      },
+      "disabled": true,
+      "_note": "Set VOICENOTES_API_KEY env var, then flip disabled to false"
+    }
+  }
+}
