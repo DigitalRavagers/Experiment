@@ -1,0 +1,69 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=\"$CLAUDE_TOOL_INPUT_FILE_PATH\"; case \"$file\" in *.html|*.css|*.tsx|*.jsx|*.ts|*.js|*.svelte|*.vue) echo \"[router] UI file modified: $file — /impeccable check recommended\" ;; esac"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"[AGI OS] Session complete. Run /caveman-stats to check token efficiency.\""
+          }
+        ]
+      }
+    ]
+  },
+  "mcpServers": {
+    "n8n": {
+      "command": "npx",
+      "args": ["-y", "n8n-mcp"],
+      "env": {
+        "N8N_API_URL": "${N8N_API_URL}",
+        "N8N_API_KEY": "${N8N_API_KEY}"
+      },
+      "disabled": true,
+      "_activate": "Get N8N_API_URL + N8N_API_KEY from Hermes VPS → n8n dashboard → Settings → API, then set disabled:false"
+    },
+    "voicenotes": {
+      "command": "npx",
+      "args": ["-y", "@voicenotes/mcp"],
+      "env": {
+        "VOICENOTES_API_KEY": "${VOICENOTES_API_KEY}"
+      },
+      "disabled": true,
+      "_activate": "Get VOICENOTES_API_KEY from voicenotes.com → Settings → API, then set disabled:false"
+    }
+  },
+  "infrastructure": {
+    "supabase": {
+      "projectId": "utuwsfqssuwkgmgyigwx",
+      "url": "https://utuwsfqssuwkgmgyigwx.supabase.co",
+      "tables": ["voicenotes_corpus"],
+      "webhook": "https://agi-dashboard-v2.vercel.app/api/vn-webhook"
+    },
+    "vercel": {
+      "project": "agi-dashboard-v2",
+      "url": "https://agi-dashboard-v2.vercel.app"
+    },
+    "googleDrive": {
+      "folder": "My Drive/AGI-OS/Voicenotes Notes For Second brain",
+      "folderId": "1cjyWUAJdc7PVjOjXeGnRAET6aQd2NS6Y",
+      "account": "nchd1762@gmail.com",
+      "appsScript": "https://script.google.com/macros/s/AKfycbyT9ZR0X6L9c9sB0UBfhc0y912h3iteVLfSWMl-9vXYg68vHeavgDLrGRBoWfaUmM6OBQ/exec"
+    },
+    "github": {
+      "repo": "georgeofthisjungle/AGI",
+      "branch": "agi-dashboard-v2"
+    }
+  }
+}

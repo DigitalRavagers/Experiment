@@ -1,0 +1,181 @@
+{
+  "version": "1.0",
+  "description": "AGI OS intent router — maps task intent to skill pipeline and agent persona",
+  "intents": {
+    "DESIGN_CREATE": {
+      "triggers": ["design", "UI", "interface", "layout", "component", "landing page", "dashboard", "frontend", "webpage"],
+      "pipeline": ["ui-ux-pro-max", "design-taste-frontend", "impeccable"],
+      "agent": "design-agent",
+      "ring": "functional"
+    },
+    "DESIGN_EXTRACT": {
+      "triggers": ["extract design", "get tokens", "design language", "design system from", "what fonts", "what colors", "what typography"],
+      "pipeline": ["extract-design"],
+      "agent": "design-agent",
+      "ring": "functional"
+    },
+    "DESIGN_BRAND": {
+      "triggers": ["brand kit", "brand identity", "brand system", "style guide", "brand guidelines"],
+      "pipeline": ["ckm-brand", "ckm-design-system", "brandkit"],
+      "agent": "design-agent",
+      "ring": "brand"
+    },
+    "VIDEO_CREATE": {
+      "triggers": ["make video", "render video", "explainer", "social clip", "slideshow", "video content", "short form video"],
+      "pipeline": ["hyperframes", "hyperframes-core"],
+      "agent": "content-agent",
+      "ring": "functional"
+    },
+    "VIDEO_ANIMATE": {
+      "triggers": ["animate", "motion", "transition", "kinetic text", "animated", "motion graphics"],
+      "pipeline": ["hyperframes-animation", "motion-graphics"],
+      "agent": "content-agent",
+      "ring": "functional"
+    },
+    "VIDEO_WEBSITE": {
+      "triggers": ["website to video", "site preview video", "record website", "site walkthrough"],
+      "pipeline": ["website-to-video"],
+      "agent": "content-agent",
+      "ring": "functional"
+    },
+    "VIDEO_PRODUCT": {
+      "triggers": ["product launch video", "launch clip", "promo video", "product demo video", "feature video"],
+      "pipeline": ["product-launch-video", "hyperframes-creative"],
+      "agent": "content-agent",
+      "ring": "brand"
+    },
+    "MARKETING_STRATEGY": {
+      "triggers": ["marketing strategy", "go-to-market", "GTM", "positioning", "product marketing", "market entry"],
+      "pipeline": ["product-marketing", "marketing-plan", "marketing-psychology"],
+      "agent": "marketing-agent",
+      "ring": "brand"
+    },
+    "MARKETING_SEO": {
+      "triggers": ["SEO", "search ranking", "keywords", "programmatic SEO", "AI search", "search optimization", "backlinks"],
+      "pipeline": ["ai-seo", "seo-audit", "programmatic-seo"],
+      "agent": "marketing-agent",
+      "ring": "functional"
+    },
+    "MARKETING_EMAIL": {
+      "triggers": ["email campaign", "newsletter", "cold email", "drip sequence", "email sequence", "outreach email"],
+      "pipeline": ["emails", "cold-email"],
+      "agent": "marketing-agent",
+      "ring": "brand"
+    },
+    "MARKETING_SOCIAL": {
+      "triggers": ["social media", "Instagram", "LinkedIn", "Twitter", "X post", "content calendar", "social content"],
+      "pipeline": ["social", "content-strategy"],
+      "agent": "content-agent",
+      "ring": "brand"
+    },
+    "MARKETING_ADS": {
+      "triggers": ["paid ads", "ad creative", "Google Ads", "Meta Ads", "Facebook Ads", "PPC", "paid acquisition"],
+      "pipeline": ["ads", "ad-creative"],
+      "agent": "marketing-agent",
+      "ring": "brand"
+    },
+    "MARKETING_LAUNCH": {
+      "triggers": ["launch", "go live", "product release", "launch checklist", "ship it", "release plan"],
+      "pipeline": ["launch", "product-marketing", "marketing-plan"],
+      "agent": "marketing-agent",
+      "ring": "brand"
+    },
+    "MARKETING_GROWTH": {
+      "triggers": ["growth hacking", "viral", "referrals", "acquisition", "CRO", "conversion rate", "funnel"],
+      "pipeline": ["cro", "referrals", "marketing-ideas"],
+      "agent": "marketing-agent",
+      "ring": "functional"
+    },
+    "MARKETING_RETENTION": {
+      "triggers": ["churn", "retention", "onboarding", "activation", "lifecycle", "winback", "re-engage"],
+      "pipeline": ["churn-prevention", "onboarding", "emails"],
+      "agent": "marketing-agent",
+      "ring": "brand"
+    },
+    "MARKETING_COPY": {
+      "triggers": ["write copy", "ad copy", "landing page copy", "tagline", "headline", "copywrite", "microcopy"],
+      "pipeline": ["copywriting", "copy-editing"],
+      "agent": "content-agent",
+      "ring": "brand"
+    },
+    "MARKETING_PR": {
+      "triggers": ["press release", "PR", "media outreach", "public relations", "press pitch", "journalist outreach"],
+      "pipeline": ["public-relations"],
+      "agent": "marketing-agent",
+      "ring": "functional"
+    },
+    "MARKETING_RESEARCH": {
+      "triggers": ["analyze competitor", "market research", "customer research", "ICP", "persona research", "user interviews"],
+      "pipeline": ["customer-research", "competitor-profiling", "competitors"],
+      "agent": "marketing-agent",
+      "ring": "functional"
+    },
+    "SALES": {
+      "triggers": ["sales enablement", "pitch deck", "prospecting", "cold outreach", "CRM", "sales collateral", "proposal"],
+      "pipeline": ["sales-enablement", "prospecting", "cold-email"],
+      "agent": "ops-agent",
+      "ring": "brand"
+    },
+    "REVENUE_OPS": {
+      "triggers": ["RevOps", "revenue operations", "pipeline management", "forecasting", "sales ops", "deal flow"],
+      "pipeline": ["revops"],
+      "agent": "ops-agent",
+      "ring": "functional"
+    },
+    "AUTOMATION": {
+      "triggers": ["automate", "workflow", "trigger", "n8n", "integration", "Zapier", "schedule", "recurring task"],
+      "pipeline": ["n8n-mcp"],
+      "agent": "ops-agent",
+      "ring": "functional"
+    },
+    "COMPRESS": {
+      "triggers": ["compress output", "token efficient", "summarize for context", "shorten this", "caveman"],
+      "pipeline": ["caveman"],
+      "agent": "any",
+      "ring": "core"
+    },
+    "ANALYTICS": {
+      "triggers": ["analytics", "metrics", "dashboard data", "A/B test", "conversion tracking", "attribution"],
+      "pipeline": ["analytics", "ab-testing"],
+      "agent": "marketing-agent",
+      "ring": "functional"
+    }
+  },
+  "compositeWorkflows": {
+    "brand_launch": {
+      "description": "Full brand go-live sequence",
+      "sequence": ["DESIGN_BRAND", "MARKETING_STRATEGY", "MARKETING_COPY", "VIDEO_PRODUCT", "MARKETING_LAUNCH"],
+      "agents": ["design-agent", "marketing-agent", "content-agent"],
+      "orchestratedBy": "orchestrator"
+    },
+    "content_sprint": {
+      "description": "Weekly content production cycle",
+      "sequence": ["MARKETING_SOCIAL", "MARKETING_COPY", "VIDEO_CREATE", "MARKETING_EMAIL"],
+      "agents": ["content-agent", "marketing-agent"],
+      "orchestratedBy": "orchestrator"
+    },
+    "growth_audit": {
+      "description": "Full growth funnel analysis and optimization",
+      "sequence": ["MARKETING_SEO", "MARKETING_RESEARCH", "MARKETING_GROWTH", "ANALYTICS"],
+      "agents": ["marketing-agent"],
+      "orchestratedBy": "orchestrator"
+    },
+    "design_audit": {
+      "description": "Full site design audit and refresh",
+      "sequence": ["DESIGN_EXTRACT", "DESIGN_CREATE", "MARKETING_COPY"],
+      "agents": ["design-agent", "content-agent"],
+      "orchestratedBy": "orchestrator"
+    }
+  },
+  "brandRegistry": {
+    "brand-01": { "contextPath": "brands/brand-01/BRAND.md", "status": "scaffold" },
+    "brand-02": { "contextPath": "brands/brand-02/BRAND.md", "status": "scaffold" },
+    "brand-03": { "contextPath": "brands/brand-03/BRAND.md", "status": "scaffold" },
+    "brand-04": { "contextPath": "brands/brand-04/BRAND.md", "status": "scaffold" },
+    "brand-05": { "contextPath": "brands/brand-05/BRAND.md", "status": "scaffold" },
+    "brand-06": { "contextPath": "brands/brand-06/BRAND.md", "status": "scaffold" },
+    "brand-07": { "contextPath": "brands/brand-07/BRAND.md", "status": "scaffold" },
+    "brand-08": { "contextPath": "brands/brand-08/BRAND.md", "status": "scaffold" },
+    "brand-09": { "contextPath": "brands/brand-09/BRAND.md", "status": "scaffold" }
+  }
+}

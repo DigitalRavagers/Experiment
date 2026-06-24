@@ -1,0 +1,44 @@
+{
+  "_template": "lead-capture",
+  "_brand": "brand-01",
+  "_brandName": "Digital Ravagers",
+  "_description": "Capture new leads from website forms → Supabase → email sequence trigger",
+  "name": "Digital Ravagers — Lead Capture & Nurture",
+  "nodes": [
+    {
+      "id": "webhook",
+      "type": "n8n-nodes-base.webhook",
+      "name": "Form Submission",
+      "parameters": {
+        "path": "brand-01/lead",
+        "method": "POST"
+      },
+      "_note": "POST body: { name, email, company, pain_point, source }"
+    },
+    {
+      "id": "supabase-insert",
+      "type": "n8n-nodes-base.supabase",
+      "name": "Store Lead",
+      "parameters": {
+        "projectUrl": "https://utuwsfqssuwkgmgyigwx.supabase.co",
+        "table": "leads",
+        "operation": "insert"
+      }
+    },
+    {
+      "id": "tag-segment",
+      "type": "n8n-nodes-base.code",
+      "name": "Segment by Pain Point",
+      "_note": "Routes to appropriate email sequence based on pain_point field"
+    },
+    {
+      "id": "email-day1",
+      "type": "n8n-nodes-base.gmail",
+      "name": "Send Welcome Email",
+      "parameters": {
+        "subject": "Welcome to Digital Ravagers — here's what to expect",
+        "_note": "Use /cold-email skill output for sequence content"
+      }
+    }
+  ]
+}

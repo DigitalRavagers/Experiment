@@ -1,0 +1,49 @@
+# AGI OS — gitignore
+
+# Credentials and secrets
+.env
+.env.*
+*.key
+*.pem
+secrets.json
+credentials.json
+
+# Node
+node_modules/
+.npm/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+dist/
+*.egg-info/
+
+# Build outputs
+.next/
+out/
+build/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary / scratch
+tmp/
+*.tmp
+*.log
+
+# Claude scratchpad
+/tmp/
+
+# HyperFrames render output (large binaries)
+*.mp4
+*.mov
+renders/
+
+# Design extraction output (large, regeneratable)
+design-extract-output/
