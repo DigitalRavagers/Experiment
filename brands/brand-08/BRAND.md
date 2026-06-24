@@ -1,65 +1,41 @@
-# Brand Context — [BRAND NAME]
-
-> Copy this file to `brands/brand-08/BRAND.md` and fill in all sections before activating any agent for this brand.
-
----
+# Brand Context — Creative Grooves Inc.
 
 ## Identity
 
 | Field | Value |
 |---|---|
-| Brand Name | [Name] |
+| Brand Name | Creative Grooves Inc. |
 | Brand ID | brand-08 |
-| Category | [Industry / Vertical] |
-| Stage | [Pre-launch / Active / Scaling / Mature] |
-| Primary Market | [B2B / B2C / D2C / Marketplace] |
+| Category | Music / Creative Arts |
+| Stage | Early — artist profile setup in progress |
+| Primary Market | B2C — music listeners, arts community |
+
+## Legal
+
+- Separate legal entity from Agniqo/Digital Ravagers
+- Separate payment gateway
 
 ## Voice & Tone
 
-- **Personality**: [e.g. bold, minimal, playful, authoritative]
-- **Tone**: [e.g. direct and confident / warm and conversational]
-- **Vocabulary**: [words to use] / [words to avoid]
-- **Analogies**: [brand sounds like ___]
+- **Personality**: Artistic, expressive, soulful
+- **Tone**: Creative and emotive — the sound of something real
+- **Vocabulary**: Use: sound, vibration, expression, authentic, soul / Avoid: commercial, manufactured
 
-## Audience
+## Key People
 
-- **ICP**: [Job title, industry, company size, pain point]
-- **Demographics**: [Age, location, income bracket if B2C]
-- **Key Pain Points**: 
-  1. [Pain 1]
-  2. [Pain 2]
-  3. [Pain 3]
-
-## Positioning
-
-- **Category**: [What category does this brand define or compete in?]
-- **Differentiator**: [One sentence — what only this brand does]
-- **Tagline**: [Current tagline]
-- **Elevator Pitch**: [2-sentence pitch]
+- Lekha: primary artist — song release in progress, setting up artist profile
 
 ## Products / Offers
 
-| Product | Price | Status |
-|---|---|---|
-| [Product 1] | $XX | [Live / Planned] |
-
-## Brand Assets
-
-- Design tokens: `brands/brand-08/design-system/tokens.json`
-- Logo: `brands/brand-08/design-system/assets/logo.*`
-- Color palette: See tokens.json
-- Typography: See tokens.json
-
-## Active Workflows
-
-List active n8n workflows in `brands/brand-08/workflows/`.
+| Product | Status |
+|---|---|
+| Lekha single release | In progress |
+| Artist profile setup | In progress |
+| Music distribution | Planned |
 
 ## Agent Assignments
 
-| Role | Persona File | Status |
+| Role | Persona | Status |
 |---|---|---|
-| Orchestrator | `agents/personas/orchestrator.md` | Active |
-| Marketing | `agents/personas/marketing-agent.md` | Active |
-| Design | `agents/personas/design-agent.md` | Active |
-| Content | `agents/personas/content-agent.md` | Active |
-| Ops | `agents/personas/ops-agent.md` | Active |
+| Content | agents/personas/content-agent.md | Active |
+| Marketing | agents/personas/marketing-agent.md | Active |

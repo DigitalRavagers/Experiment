@@ -1,65 +1,56 @@
-# Brand Context — [BRAND NAME]
-
-> Copy this file to `brands/brand-09/BRAND.md` and fill in all sections before activating any agent for this brand.
-
----
+# Brand Context — THEP (The Human Evolution Project)
 
 ## Identity
 
 | Field | Value |
 |---|---|
-| Brand Name | [Name] |
+| Brand Name | The Human Evolution Project (THEP) |
 | Brand ID | brand-09 |
-| Category | [Industry / Vertical] |
-| Stage | [Pre-launch / Active / Scaling / Mature] |
-| Primary Market | [B2B / B2C / D2C / Marketplace] |
+| Category | Personal Development / Consciousness / Philosophy |
+| Stage | Ongoing — overarching personal mission, content and products in development |
+| Primary Market | B2C — seekers, thinkers, entrepreneurs on a personal growth journey |
 
 ## Voice & Tone
 
-- **Personality**: [e.g. bold, minimal, playful, authoritative]
-- **Tone**: [e.g. direct and confident / warm and conversational]
-- **Vocabulary**: [words to use] / [words to avoid]
-- **Analogies**: [brand sounds like ___]
+- **Personality**: Philosophical, visionary, deeply human — George at his most personal
+- **Tone**: Reflective and inspiring — "here's what I've learned about being human"
+- **Vocabulary**: Use: evolution, consciousness, potential, mastery, clarity / Avoid: toxic positivity, superficial motivational quotes
+
+## Vision
+
+THEP is the overarching mission behind all brands — the belief that human potential is limitless when guided by clarity, emotional mastery, and the right tools. Every other brand in the ecosystem is an expression of this mission.
 
 ## Audience
 
-- **ICP**: [Job title, industry, company size, pain point]
-- **Demographics**: [Age, location, income bracket if B2C]
-- **Key Pain Points**: 
-  1. [Pain 1]
-  2. [Pain 2]
-  3. [Pain 3]
+- **ICP**: Introspective entrepreneurs and seekers aged 25–45 who want to grow mentally, financially, and digitally while building a life with purpose
+- **Key Themes**:
+  1. Building an AI-powered solopreneur ecosystem to demonstrate what one person can do
+  2. Psychology, neuroscience, and consciousness as tools for life mastery
+  3. Wealth and impact as natural byproducts of aligned action
 
 ## Positioning
 
-- **Category**: [What category does this brand define or compete in?]
-- **Differentiator**: [One sentence — what only this brand does]
-- **Tagline**: [Current tagline]
-- **Elevator Pitch**: [2-sentence pitch]
+- **Differentiator**: The honest, first-person account of building an empire from scratch using AI + psychology
+- **Long-term**: THEP becomes the philosophical container that ties all 9 brands into a coherent story
 
 ## Products / Offers
 
-| Product | Price | Status |
-|---|---|---|
-| [Product 1] | $XX | [Live / Planned] |
+| Product | Status |
+|---|---|
+| Voicenotes digital brain (live) | Active — Supabase + Drive pipeline |
+| Content: podcast / YouTube / writing | In development |
+| Course / program (long-term) | Planned |
 
-## Brand Assets
+## Connected Infrastructure
 
-- Design tokens: `brands/brand-09/design-system/tokens.json`
-- Logo: `brands/brand-09/design-system/assets/logo.*`
-- Color palette: See tokens.json
-- Typography: See tokens.json
-
-## Active Workflows
-
-List active n8n workflows in `brands/brand-09/workflows/`.
+- Voicenotes corpus: All notes tagged `THEP the human evolution project`
+- Digital brain: https://utuwsfqssuwkgmgyigwx.supabase.co → voicenotes_corpus table
+- Auto-classification: 13-tag canonical classifier running on all new notes
 
 ## Agent Assignments
 
-| Role | Persona File | Status |
+| Role | Persona | Status |
 |---|---|---|
-| Orchestrator | `agents/personas/orchestrator.md` | Active |
-| Marketing | `agents/personas/marketing-agent.md` | Active |
-| Design | `agents/personas/design-agent.md` | Active |
-| Content | `agents/personas/content-agent.md` | Active |
-| Ops | `agents/personas/ops-agent.md` | Active |
+| Orchestrator | agents/personas/orchestrator.md | Active |
+| Content | agents/personas/content-agent.md | Active |
+| Marketing | agents/personas/marketing-agent.md | Active |

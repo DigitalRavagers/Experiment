@@ -1,65 +1,52 @@
-# Brand Context — [BRAND NAME]
-
-> Copy this file to `brands/brand-07/BRAND.md` and fill in all sections before activating any agent for this brand.
-
----
+# Brand Context — Agniqo
 
 ## Identity
 
 | Field | Value |
 |---|---|
-| Brand Name | [Name] |
+| Brand Name | Agniqo |
 | Brand ID | brand-07 |
-| Category | [Industry / Vertical] |
-| Stage | [Pre-launch / Active / Scaling / Mature] |
-| Primary Market | [B2B / B2C / D2C / Marketplace] |
+| Category | AI SaaS / Chatbot & Automation Platform |
+| Stage | Active — DBA registered under Digital Ravagers Inc. |
+| Primary Market | B2B — businesses needing chatbot/automation solutions |
+
+## Legal
+
+- DBA: Agniqo, Digital Ravagers Inc.
+- Separate payment gateway from Creative Grooves Inc.
 
 ## Voice & Tone
 
-- **Personality**: [e.g. bold, minimal, playful, authoritative]
-- **Tone**: [e.g. direct and confident / warm and conversational]
-- **Vocabulary**: [words to use] / [words to avoid]
-- **Analogies**: [brand sounds like ___]
+- **Personality**: Technical but approachable, precise, reliable
+- **Tone**: Professional product tone — "built for scale, designed for simplicity"
+- **Vocabulary**: Use: automation, chatbot, AI-powered, workflow / Avoid: overpromising, vague AI claims
 
 ## Audience
 
-- **ICP**: [Job title, industry, company size, pain point]
-- **Demographics**: [Age, location, income bracket if B2C]
-- **Key Pain Points**: 
-  1. [Pain 1]
-  2. [Pain 2]
-  3. [Pain 3]
+- **ICP**: SMBs and mid-market companies needing chatbot and automation infrastructure without building from scratch
+- **Key Pain Points**:
+  1. Building chatbot solutions in-house is expensive and slow
+  2. Off-the-shelf bots don't fit their specific workflow
+  3. Need automation but lack technical team to implement
 
 ## Positioning
 
-- **Category**: [What category does this brand define or compete in?]
-- **Differentiator**: [One sentence — what only this brand does]
-- **Tagline**: [Current tagline]
-- **Elevator Pitch**: [2-sentence pitch]
+- **Differentiator**: Custom-configured, deployable chatbot + automation platform with onboarding support
+- **Tagline**: TBD
+- **Partner**: Botsify (template automation, access packages, video onboarding)
 
 ## Products / Offers
 
 | Product | Price | Status |
 |---|---|---|
-| [Product 1] | $XX | [Live / Planned] |
-
-## Brand Assets
-
-- Design tokens: `brands/brand-07/design-system/tokens.json`
-- Logo: `brands/brand-07/design-system/assets/logo.*`
-- Color palette: See tokens.json
-- Typography: See tokens.json
-
-## Active Workflows
-
-List active n8n workflows in `brands/brand-07/workflows/`.
+| Chatbot deployment packages | TBD | Active |
+| Automation workflow setup | TBD | Active |
+| Partner white-label solutions | TBD | In development |
 
 ## Agent Assignments
 
-| Role | Persona File | Status |
+| Role | Persona | Status |
 |---|---|---|
-| Orchestrator | `agents/personas/orchestrator.md` | Active |
-| Marketing | `agents/personas/marketing-agent.md` | Active |
-| Design | `agents/personas/design-agent.md` | Active |
-| Content | `agents/personas/content-agent.md` | Active |
-| Ops | `agents/personas/ops-agent.md` | Active |
+| Orchestrator | agents/personas/orchestrator.md | Active |
+| Ops | agents/personas/ops-agent.md | Active |
+| Marketing | agents/personas/marketing-agent.md | Active |

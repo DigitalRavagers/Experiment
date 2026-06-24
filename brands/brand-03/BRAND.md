@@ -1,65 +1,51 @@
-# Brand Context — [BRAND NAME]
-
-> Copy this file to `brands/brand-03/BRAND.md` and fill in all sections before activating any agent for this brand.
-
----
+# Brand Context — Blooming Chatbots
 
 ## Identity
 
 | Field | Value |
 |---|---|
-| Brand Name | [Name] |
+| Brand Name | Blooming Chatbots |
 | Brand ID | brand-03 |
-| Category | [Industry / Vertical] |
-| Stage | [Pre-launch / Active / Scaling / Mature] |
-| Primary Market | [B2B / B2C / D2C / Marketplace] |
+| Category | AI Chatbots / Conversational AI Products |
+| Stage | Active — R&D, client deployments ongoing |
+| Primary Market | B2B — content creators, businesses, mental health platforms |
 
 ## Voice & Tone
 
-- **Personality**: [e.g. bold, minimal, playful, authoritative]
-- **Tone**: [e.g. direct and confident / warm and conversational]
-- **Vocabulary**: [words to use] / [words to avoid]
-- **Analogies**: [brand sounds like ___]
+- **Personality**: Friendly, intelligent, solution-first
+- **Tone**: Practical and warm — "here's the bot that solves that problem"
+- **Vocabulary**: Use: GPT-powered, research assistant, chatbot ecosystem / Avoid: technical jargon
 
 ## Audience
 
-- **ICP**: [Job title, industry, company size, pain point]
-- **Demographics**: [Age, location, income bracket if B2C]
-- **Key Pain Points**: 
-  1. [Pain 1]
-  2. [Pain 2]
-  3. [Pain 3]
+- **ICP**: Content creators needing research automation; businesses wanting 24/7 customer support; mental health platforms needing empathetic conversational AI
+- **Key Pain Points**:
+  1. Content research is time-consuming and repetitive
+  2. Customer support is expensive to staff around the clock
+  3. Mental health platforms need scalable, always-available support tools
 
 ## Positioning
 
-- **Category**: [What category does this brand define or compete in?]
-- **Differentiator**: [One sentence — what only this brand does]
-- **Tagline**: [Current tagline]
-- **Elevator Pitch**: [2-sentence pitch]
+- **Differentiator**: Custom-trained on client-specific data + multi-use cases (research, support, mental health)
+- **Tagline**: "Smart bots. Real results."
+- **Elevator Pitch**: Blooming Chatbots builds GPT-powered research assistants and chatbot ecosystems trained on your data, deployed in days.
 
 ## Products / Offers
 
 | Product | Price | Status |
 |---|---|---|
-| [Product 1] | $XX | [Live / Planned] |
+| Custom GPT research assistant | TBD | Active |
+| Customer support bot | TBD | Active |
+| Mental health support bot | TBD | In development |
 
-## Brand Assets
+## Partner
 
-- Design tokens: `brands/brand-03/design-system/tokens.json`
-- Logo: `brands/brand-03/design-system/assets/logo.*`
-- Color palette: See tokens.json
-- Typography: See tokens.json
-
-## Active Workflows
-
-List active n8n workflows in `brands/brand-03/workflows/`.
+- Botsify: template automation + access packages + video onboarding workflow (in progress)
 
 ## Agent Assignments
 
-| Role | Persona File | Status |
+| Role | Persona | Status |
 |---|---|---|
-| Orchestrator | `agents/personas/orchestrator.md` | Active |
-| Marketing | `agents/personas/marketing-agent.md` | Active |
-| Design | `agents/personas/design-agent.md` | Active |
-| Content | `agents/personas/content-agent.md` | Active |
-| Ops | `agents/personas/ops-agent.md` | Active |
+| Orchestrator | agents/personas/orchestrator.md | Active |
+| Marketing | agents/personas/marketing-agent.md | Active |
+| Ops | agents/personas/ops-agent.md | Active |

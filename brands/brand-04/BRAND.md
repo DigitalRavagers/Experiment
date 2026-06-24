@@ -1,65 +1,47 @@
-# Brand Context — [BRAND NAME]
-
-> Copy this file to `brands/brand-04/BRAND.md` and fill in all sections before activating any agent for this brand.
-
----
+# Brand Context — Shields from Scams
 
 ## Identity
 
 | Field | Value |
 |---|---|
-| Brand Name | [Name] |
+| Brand Name | Shields from Scams |
 | Brand ID | brand-04 |
-| Category | [Industry / Vertical] |
-| Stage | [Pre-launch / Active / Scaling / Mature] |
-| Primary Market | [B2B / B2C / D2C / Marketplace] |
+| Category | Digital Safety / Consumer Education |
+| Stage | Early — concept validated, content production beginning |
+| Primary Market | B2C — individuals, small businesses, vulnerable populations |
 
 ## Voice & Tone
 
-- **Personality**: [e.g. bold, minimal, playful, authoritative]
-- **Tone**: [e.g. direct and confident / warm and conversational]
-- **Vocabulary**: [words to use] / [words to avoid]
-- **Analogies**: [brand sounds like ___]
+- **Personality**: Protective, clear, trustworthy
+- **Tone**: Urgent but calm — "here's what's happening and here's how to stay safe"
+- **Analogies**: Shields from Scams is like a neighbourhood watch for the internet
 
 ## Audience
 
-- **ICP**: [Job title, industry, company size, pain point]
-- **Demographics**: [Age, location, income bracket if B2C]
-- **Key Pain Points**: 
-  1. [Pain 1]
-  2. [Pain 2]
-  3. [Pain 3]
+- **ICP**: Non-tech-savvy individuals and small business owners vulnerable to online scams; parents protecting their families
+- **Key Pain Points**:
+  1. Can't identify new scam patterns before being victimized
+  2. Small businesses lose revenue and reputation from fraud
+  3. No centralized, plain-language, real-time resource for scam alerts
 
 ## Positioning
 
-- **Category**: [What category does this brand define or compete in?]
-- **Differentiator**: [One sentence — what only this brand does]
-- **Tagline**: [Current tagline]
-- **Elevator Pitch**: [2-sentence pitch]
+- **Differentiator**: Real-time alerts + educational tools — active protection, not just awareness
+- **Tagline**: "Stay one step ahead of every scam."
+- **Elevator Pitch**: Shields from Scams protects individuals and small businesses from online scams and fraud using educational tools and real-time alerts.
 
 ## Products / Offers
 
 | Product | Price | Status |
 |---|---|---|
-| [Product 1] | $XX | [Live / Planned] |
-
-## Brand Assets
-
-- Design tokens: `brands/brand-04/design-system/tokens.json`
-- Logo: `brands/brand-04/design-system/assets/logo.*`
-- Color palette: See tokens.json
-- Typography: See tokens.json
-
-## Active Workflows
-
-List active n8n workflows in `brands/brand-04/workflows/`.
+| Free alert newsletter | Free | Planned |
+| Scam awareness course | TBD | Planned |
+| Business fraud protection toolkit | TBD | Planned |
 
 ## Agent Assignments
 
-| Role | Persona File | Status |
+| Role | Persona | Status |
 |---|---|---|
-| Orchestrator | `agents/personas/orchestrator.md` | Active |
-| Marketing | `agents/personas/marketing-agent.md` | Active |
-| Design | `agents/personas/design-agent.md` | Active |
-| Content | `agents/personas/content-agent.md` | Active |
-| Ops | `agents/personas/ops-agent.md` | Active |
+| Orchestrator | agents/personas/orchestrator.md | Active |
+| Marketing | agents/personas/marketing-agent.md | Active |
+| Content | agents/personas/content-agent.md | Active |

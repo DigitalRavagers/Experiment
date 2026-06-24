@@ -1,65 +1,54 @@
-# Brand Context — [BRAND NAME]
-
-> Copy this file to `brands/brand-05/BRAND.md` and fill in all sections before activating any agent for this brand.
-
----
+# Brand Context — George of the Jungle
 
 ## Identity
 
 | Field | Value |
 |---|---|
-| Brand Name | [Name] |
+| Brand Name | George of the Jungle (George's Innovation Hub) |
 | Brand ID | brand-05 |
-| Category | [Industry / Vertical] |
-| Stage | [Pre-launch / Active / Scaling / Mature] |
-| Primary Market | [B2B / B2C / D2C / Marketplace] |
+| Category | Personal Brand / YouTube / Thought Leadership |
+| Stage | Active — content channel building |
+| Primary Market | B2C — entrepreneurs, solopreneurs, digital natives |
 
 ## Voice & Tone
 
-- **Personality**: [e.g. bold, minimal, playful, authoritative]
-- **Tone**: [e.g. direct and confident / warm and conversational]
-- **Vocabulary**: [words to use] / [words to avoid]
-- **Analogies**: [brand sounds like ___]
+- **Personality**: Raw, authentic, explorer — George navigating the digital jungle
+- **Tone**: Casual, curious, first-person — "let me show you what I found"
+- **Vocabulary**: Use: ecosystem, experiment, building in public, real talk / Avoid: polished corporate speak
+- **Analogies**: George of the Jungle = the real-life solopreneur building an AI empire from scratch
 
 ## Audience
 
-- **ICP**: [Job title, industry, company size, pain point]
-- **Demographics**: [Age, location, income bracket if B2C]
-- **Key Pain Points**: 
-  1. [Pain 1]
-  2. [Pain 2]
-  3. [Pain 3]
+- **ICP**: Aspiring solopreneurs and digital entrepreneurs who want to see behind the curtain of building an AI-powered business ecosystem in real time
+- **Key Pain Points**:
+  1. Overwhelmed by all the tools/systems — want someone to show what actually works
+  2. Looking for a realistic, non-hype blueprint for solopreneurship
+  3. Want community and accountability in their building journey
 
 ## Positioning
 
-- **Category**: [What category does this brand define or compete in?]
-- **Differentiator**: [One sentence — what only this brand does]
-- **Tagline**: [Current tagline]
-- **Elevator Pitch**: [2-sentence pitch]
+- **Category**: Personal brand / building-in-public content channel
+- **Differentiator**: Authentic documentation of building 9 brands + an AI agent fleet simultaneously
+- **Content pillars**: AI automation, brand building, solopreneur systems, digital products, personal growth
+- **Extension brands**: "George of the Jungle OG" + "Mind and Money" as sub-channels
 
-## Products / Offers
+## Revenue
 
-| Product | Price | Status |
-|---|---|---|
-| [Product 1] | $XX | [Live / Planned] |
+- YouTube monetization (long-term)
+- Affiliate marketing for tools used
+- Lead generation for Digital Ravagers ecosystem
+- Own digital products
 
-## Brand Assets
+## Platform Priority
 
-- Design tokens: `brands/brand-05/design-system/tokens.json`
-- Logo: `brands/brand-05/design-system/assets/logo.*`
-- Color palette: See tokens.json
-- Typography: See tokens.json
-
-## Active Workflows
-
-List active n8n workflows in `brands/brand-05/workflows/`.
+- YouTube (primary)
+- Instagram (secondary)
+- LinkedIn (professional)
 
 ## Agent Assignments
 
-| Role | Persona File | Status |
+| Role | Persona | Status |
 |---|---|---|
-| Orchestrator | `agents/personas/orchestrator.md` | Active |
-| Marketing | `agents/personas/marketing-agent.md` | Active |
-| Design | `agents/personas/design-agent.md` | Active |
-| Content | `agents/personas/content-agent.md` | Active |
-| Ops | `agents/personas/ops-agent.md` | Active |
+| Orchestrator | agents/personas/orchestrator.md | Active |
+| Content | agents/personas/content-agent.md | Active |
+| Marketing | agents/personas/marketing-agent.md | Active |

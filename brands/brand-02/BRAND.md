@@ -1,65 +1,62 @@
-# Brand Context — [BRAND NAME]
-
-> Copy this file to `brands/brand-02/BRAND.md` and fill in all sections before activating any agent for this brand.
-
----
+# Brand Context — Employee School
 
 ## Identity
 
 | Field | Value |
 |---|---|
-| Brand Name | [Name] |
+| Brand Name | Employee School |
 | Brand ID | brand-02 |
-| Category | [Industry / Vertical] |
-| Stage | [Pre-launch / Active / Scaling / Mature] |
-| Primary Market | [B2B / B2C / D2C / Marketplace] |
+| Category | Online Education / Professional Development |
+| Stage | Active — building audience, pre-revenue scale |
+| Primary Market | B2C — working professionals, Gen Z workforce |
 
 ## Voice & Tone
 
-- **Personality**: [e.g. bold, minimal, playful, authoritative]
-- **Tone**: [e.g. direct and confident / warm and conversational]
-- **Vocabulary**: [words to use] / [words to avoid]
-- **Analogies**: [brand sounds like ___]
+- **Personality**: Warm, scientific, empowering — psychology meets productivity
+- **Tone**: Accessible expert — "I've studied the science so you don't have to"
+- **Vocabulary**: Use: neuroscience, emotional intelligence, peak performance, decision-making / Avoid: corporate HR speak, generic self-help clichés
+- **Analogies**: Employee School is the MBA nobody taught you — for your brain, not your resume
 
 ## Audience
 
-- **ICP**: [Job title, industry, company size, pain point]
-- **Demographics**: [Age, location, income bracket if B2C]
-- **Key Pain Points**: 
-  1. [Pain 1]
-  2. [Pain 2]
-  3. [Pain 3]
+- **ICP**: Working professionals aged 22–40 who feel stuck, overwhelmed, or underpaid and want to master the internal game of career success
+- **Demographics**: Gen Z and Millennials, India + global English-speaking markets
+- **Key Pain Points**:
+  1. Nobody taught them how to perform under pressure or navigate workplace dynamics
+  2. They know what to do but not how to think or emotionally regulate under stress
+  3. Traditional education ignores decision-making, EQ, and peak performance
 
 ## Positioning
 
-- **Category**: [What category does this brand define or compete in?]
-- **Differentiator**: [One sentence — what only this brand does]
-- **Tagline**: [Current tagline]
-- **Elevator Pitch**: [2-sentence pitch]
+- **Category**: Neuroscience-backed professional education
+- **Differentiator**: Applies psychology and neuroscience to real workplace scenarios — actionable frameworks you use Monday morning
+- **Tagline**: "Master the game nobody teaches you."
+- **Elevator Pitch**: Employee School uses psychology and neuroscience to help professionals master decision-making, emotional intelligence, and peak performance — the skills that actually determine career success.
+
+## Platform
+
+- LMS + community (Self-Healers template model — course + community in one)
+- Entry price: $49–$99, increasing as community grows
 
 ## Products / Offers
 
 | Product | Price | Status |
 |---|---|---|
-| [Product 1] | $XX | [Live / Planned] |
+| Core launch course | $49–$99 | In development |
+| Community membership | TBD | Planned |
+| Lead magnets | Free | In production |
 
-## Brand Assets
+## Social
 
-- Design tokens: `brands/brand-02/design-system/tokens.json`
-- Logo: `brands/brand-02/design-system/assets/logo.*`
-- Color palette: See tokens.json
-- Typography: See tokens.json
-
-## Active Workflows
-
-List active n8n workflows in `brands/brand-02/workflows/`.
+- LinkedIn: Verified (Aadhaar submitted, profile pic required — not logo)
+- YouTube: Educational content planned
 
 ## Agent Assignments
 
-| Role | Persona File | Status |
+| Role | Persona | Status |
 |---|---|---|
-| Orchestrator | `agents/personas/orchestrator.md` | Active |
-| Marketing | `agents/personas/marketing-agent.md` | Active |
-| Design | `agents/personas/design-agent.md` | Active |
-| Content | `agents/personas/content-agent.md` | Active |
-| Ops | `agents/personas/ops-agent.md` | Active |
+| Orchestrator | agents/personas/orchestrator.md | Active |
+| Marketing | agents/personas/marketing-agent.md | Active |
+| Design | agents/personas/design-agent.md | Active |
+| Content | agents/personas/content-agent.md | Active |
+| Ops | agents/personas/ops-agent.md | Active |
