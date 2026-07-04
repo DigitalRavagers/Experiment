@@ -1,0 +1,45 @@
+{
+  "_template": "voicenote-to-brain",
+  "_description": "Universal: receives Voicenotes webhook → classifies by brand tag → routes to correct brand workflow → stores in Supabase voicenotes_corpus",
+  "_usedBy": "all 9 brands",
+  "name": "AGI-OS — Voicenote → Brand Router",
+  "nodes": [
+    {
+      "id": "vn-webhook",
+      "type": "n8n-nodes-base.webhook",
+      "name": "Voicenotes Webhook",
+      "parameters": {
+        "path": "agi-os/voicenote",
+        "method": "POST"
+      },
+      "_note": "Register this URL in Voicenotes → Settings → Integrations → Webhooks for events: recording.created, recording.updated, creation.summary"
+    },
+    {
+      "id": "classify-brand",
+      "type": "n8n-nodes-base.code",
+      "name": "Classify to Brand",
+      "parameters": {
+        "jsCode": "const tags = $input.all()[0].json.tags || [];\nconst brandMap = {\n  'digitalravagers': 'brand-01',\n  'employee school': 'brand-02',\n  'blooming chatbots': 'brand-03',\n  'shields from scams': 'brand-04',\n  'georgeofthisjungle': 'brand-05',\n  'house of mayas': 'brand-06',\n  'agniqo': 'brand-07',\n  'creative grooves': 'brand-08',\n  'THEP the human evolution project': 'brand-09',\n  'Artificial George Intelligence-AGI': 'brand-09'\n};\nconst lowerTags = tags.map(t => t.toLowerCase());\nlet brand = 'unrouted';\nfor (const [key, val] of Object.entries(brandMap)) {\n  if (lowerTags.some(t => t.includes(key.toLowerCase()))) { brand = val; break; }\n}\nreturn [{ ...$input.all()[0].json, brand_id: brand }];"
+      }
+    },
+    {
+      "id": "supabase-upsert",
+      "type": "n8n-nodes-base.supabase",
+      "name": "Upsert to voicenotes_corpus",
+      "parameters": {
+        "projectUrl": "https://utuwsfqssuwkgmgyigwx.supabase.co",
+        "table": "voicenotes_corpus",
+        "operation": "upsert"
+      }
+    },
+    {
+      "id": "drive-save",
+      "type": "n8n-nodes-base.googleDrive",
+      "name": "Save to AGI Drive Corpus",
+      "parameters": {
+        "folderId": "1cjyWUAJdc7PVjOjXeGnRAET6aQd2NS6Y",
+        "fileName": "={{$now.format('YYYY-MM-DD')}} | [={{$json.brand_id}}] | ={{$json.title}}.md"
+      }
+    }
+  ]
+}

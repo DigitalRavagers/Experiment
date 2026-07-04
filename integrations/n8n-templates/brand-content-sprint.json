@@ -1,0 +1,45 @@
+{
+  "_template": "brand-content-sprint",
+  "_description": "Universal content sprint: triggered by brand ID → loads brand context → generates week of content → saves to Drive",
+  "_usedBy": "all 9 brands — pass brand_id as parameter",
+  "name": "AGI-OS — Brand Content Sprint",
+  "nodes": [
+    {
+      "id": "trigger",
+      "type": "n8n-nodes-base.webhook",
+      "name": "Sprint Trigger",
+      "parameters": {
+        "path": "agi-os/content-sprint",
+        "method": "POST"
+      },
+      "_note": "POST: { brand_id, week_theme, platforms: ['instagram','linkedin','email'], num_posts: 5 }"
+    },
+    {
+      "id": "load-brand",
+      "type": "n8n-nodes-base.httpRequest",
+      "name": "Fetch Brand Context",
+      "parameters": {
+        "url": "https://raw.githubusercontent.com/digitalravagers/experiment/main/brands/={{$json.brand_id}}/BRAND.md",
+        "method": "GET"
+      }
+    },
+    {
+      "id": "generate-content",
+      "type": "n8n-nodes-base.openAi",
+      "name": "Generate Content Week",
+      "parameters": {
+        "model": "gpt-4o",
+        "prompt": "Brand context:\n{{$node['Fetch Brand Context'].json.data}}\n\nGenerate a week of content ({{$json.num_posts}} posts) about: {{$json.week_theme}}.\nPlatforms: {{$json.platforms}}.\nFormat as JSON array: [{platform, post_text, hashtags, cta, best_time_to_post}]"
+      }
+    },
+    {
+      "id": "save-drive",
+      "type": "n8n-nodes-base.googleDrive",
+      "name": "Save Content Calendar",
+      "parameters": {
+        "folderId": "1cjyWUAJdc7PVjOjXeGnRAET6aQd2NS6Y",
+        "fileName": "={{$now.format('YYYY-[W]WW')}}_={{$json.brand_id}}_content-calendar.json"
+      }
+    }
+  ]
+}

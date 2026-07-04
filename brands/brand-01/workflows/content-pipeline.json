@@ -1,0 +1,53 @@
+{
+  "_template": "content-pipeline",
+  "_brand": "brand-01",
+  "_brandName": "Digital Ravagers",
+  "_description": "Weekly content production automation: generate social posts + email newsletter from a single brief",
+  "_activate": "Import this JSON into n8n. Map the webhook URL and set BRAND_ID=brand-01.",
+  "name": "Digital Ravagers — Weekly Content Pipeline",
+  "nodes": [
+    {
+      "id": "trigger",
+      "type": "n8n-nodes-base.webhook",
+      "name": "Content Brief Received",
+      "parameters": {
+        "path": "brand-01/content-brief",
+        "method": "POST"
+      },
+      "_note": "POST body: { topic, target_audience, cta, platforms: ['instagram','linkedin','email'] }"
+    },
+    {
+      "id": "load-brand",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "name": "Load Brand Context",
+      "parameters": {
+        "filePath": "brands/brand-01/BRAND.md"
+      }
+    },
+    {
+      "id": "generate-social",
+      "type": "n8n-nodes-base.openAi",
+      "name": "Generate Social Posts",
+      "parameters": {
+        "prompt": "You are the content agent for Digital Ravagers. Using the brand voice: bold, systems-oriented, no-fluff. Write 3 platform-optimised posts for: {{$json.topic}}. Include Instagram (caption + hashtags), LinkedIn (professional insight), Twitter/X (punchy one-liner). CTA: {{$json.cta}}"
+      }
+    },
+    {
+      "id": "generate-email",
+      "type": "n8n-nodes-base.openAi",
+      "name": "Generate Newsletter",
+      "parameters": {
+        "prompt": "Write a 300-word email newsletter for Digital Ravagers subscribers about: {{$json.topic}}. Subject line + preview text + body + CTA. Tone: direct and confident."
+      }
+    },
+    {
+      "id": "save-output",
+      "type": "n8n-nodes-base.googleDrive",
+      "name": "Save to Drive",
+      "parameters": {
+        "folderId": "1cjyWUAJdc7PVjOjXeGnRAET6aQd2NS6Y",
+        "fileName": "={{$now.format('YYYY-MM-DD')}}_digital-ravagers_content.md"
+      }
+    }
+  ]
+}
