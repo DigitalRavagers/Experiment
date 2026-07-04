@@ -44,6 +44,12 @@
       "agent": "content-agent",
       "ring": "brand"
     },
+    "VIDEO_ANALYZE": {
+      "triggers": ["watch video", "analyze video", "video transcript", "what's in this video", "summarize video"],
+      "pipeline": ["watch"],
+      "agent": "content-agent",
+      "ring": "functional"
+    },
     "MARKETING_STRATEGY": {
       "triggers": ["marketing strategy", "go-to-market", "GTM", "positioning", "product marketing", "market entry"],
       "pipeline": ["product-marketing", "marketing-plan", "marketing-psychology"],

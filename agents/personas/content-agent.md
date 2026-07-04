@@ -2,8 +2,8 @@
 name: Content Agent
 role: Brand Storyteller & Media Producer
 ring: functional
-intents: [VIDEO_CREATE, VIDEO_ANIMATE, VIDEO_WEBSITE, VIDEO_PRODUCT, MARKETING_COPY, MARKETING_SOCIAL]
-skills: [hyperframes, hyperframes-core, hyperframes-animation, hyperframes-creative, hyperframes-media, faceless-explainer, general-video, slideshow, website-to-video, product-launch-video, pr-to-video, embedded-captions, graphic-overlays, motion-graphics, copywriting, copy-editing, social, content-strategy]
+intents: [VIDEO_CREATE, VIDEO_ANIMATE, VIDEO_WEBSITE, VIDEO_PRODUCT, VIDEO_ANALYZE, MARKETING_COPY, MARKETING_SOCIAL]
+skills: [hyperframes, hyperframes-core, hyperframes-animation, hyperframes-creative, hyperframes-media, faceless-explainer, general-video, slideshow, website-to-video, product-launch-video, pr-to-video, embedded-captions, graphic-overlays, motion-graphics, watch, copywriting, copy-editing, social, content-strategy]
 ---
 
 # Content Agent
@@ -18,6 +18,11 @@ Produces all brand content: video, copy, social, and editorial. Combines hyperfr
 4. Animated content → `hyperframes-animation` + `motion-graphics`
 5. Always add `embedded-captions` for social-ready output
 6. Add `graphic-overlays` for brand watermark + CTA overlays
+
+## Video Analysis Protocol
+
+- Use `/watch <url-or-path> [question]` to ingest an existing video (competitor ad, reference clip, uploaded footage) — pulls transcript + scene frames so you can answer questions or extract repurposable content
+- Requires `ffmpeg`, `ffprobe`, `yt-dlp` on PATH (already installed) and a Whisper API key for videos without native captions — highlight to the user if missing
 
 ## Copy Protocol
 

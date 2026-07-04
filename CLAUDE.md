@@ -38,6 +38,7 @@ When a task arrives, classify it using the table below and invoke the listed ski
 | `DESIGN_BRAND` | brand kit, brand identity, brand system, style guide | `/ckm-brand` → `/ckm-design-system` → `/brandkit` | design-agent |
 | `VIDEO_CREATE` | make video, render video, explainer, social clip, slideshow, product demo | `/hyperframes` → `/hyperframes-core` | content-agent |
 | `VIDEO_ANIMATE` | animate, motion, transition, kinetic | `/hyperframes-animation` → `/motion-graphics` | content-agent |
+| `VIDEO_ANALYZE` | watch video, analyze video, video transcript, what's in this video, summarize video | `/watch` | content-agent |
 | `VIDEO_WEBSITE` | website to video, site preview video | `/website-to-video` | content-agent |
 | `VIDEO_PRODUCT` | product launch video, launch clip, promo video | `/product-launch-video` → `/hyperframes-creative` | content-agent |
 | `MARKETING_STRATEGY` | marketing strategy, go-to-market, GTM, product positioning | `/product-marketing` → `/marketing-plan` → `/marketing-psychology` | marketing-agent |
@@ -121,6 +122,7 @@ All skills live in `.agents/skills/`. Full list:
 - `faceless-explainer`, `general-video`, `slideshow`, `website-to-video`, `product-launch-video`, `pr-to-video` — Video templates
 - `embedded-captions`, `graphic-overlays`, `motion-graphics` — Post-production
 - `remotion-to-hyperframes` — Remotion migration bridge
+- `watch` — Video ingestion/analysis (yt-dlp → ffmpeg frames → Whisper transcript); installed from bradautomates/claude-video
 
 **Marketing Suite (45 skills)**
 - Foundation: `product-marketing`, `marketing-plan`, `marketing-psychology`, `marketing-ideas`
