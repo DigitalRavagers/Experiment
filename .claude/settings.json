@@ -23,6 +23,7 @@
       }
     ]
   },
+  "_mcpNote": "n8n (Hermes VPS, webhook.digitalravagers.in/mcp-server/http) and Voicenotes are wired as account-level connectors in Claude Code — they appear automatically in-session as mcp__n8n__* / mcp__Voicenotes__* tools, no local credentials needed. The mcpServers block below is a project-local fallback only for harnesses without that account connector (e.g. a bare self-hosted Claude Code CLI); leave disabled unless running in such an environment.",
   "mcpServers": {
     "n8n": {
       "command": "npx",
@@ -32,7 +33,7 @@
         "N8N_API_KEY": "${N8N_API_KEY}"
       },
       "disabled": true,
-      "_activate": "Get N8N_API_URL + N8N_API_KEY from Hermes VPS → n8n dashboard → Settings → API, then set disabled:false"
+      "_activate": "Only needed outside the account-connector environment. Get N8N_API_URL + N8N_API_KEY from Hermes VPS → n8n dashboard → Settings → API, then set disabled:false"
     },
     "voicenotes": {
       "command": "npx",
@@ -41,7 +42,7 @@
         "VOICENOTES_API_KEY": "${VOICENOTES_API_KEY}"
       },
       "disabled": true,
-      "_activate": "Get VOICENOTES_API_KEY from voicenotes.com → Settings → API, then set disabled:false"
+      "_activate": "Only needed outside the account-connector environment. Get VOICENOTES_API_KEY from voicenotes.com → Settings → API, then set disabled:false"
     }
   },
   "infrastructure": {

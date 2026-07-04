@@ -1,6 +1,15 @@
 #!/bin/bash
 # AGI OS — n8n Activation Script
-# Run this once you have your Hermes VPS n8n credentials
+#
+# NOTE: n8n is already wired into Claude Code as an account-level connector
+# (Hermes VPS, webhook.digitalravagers.in/mcp-server/http) — it shows up
+# automatically in-session as mcp__n8n__* tools with no credentials needed.
+# This script is ONLY for importing the JSON workflow templates via n8n's
+# own REST API, which the connector doesn't do — use the connector's
+# create_workflow_from_code tool instead if working inside a Claude Code
+# session with the connector active.
+#
+# Run this once you have your Hermes VPS n8n API credentials
 # Usage: ./activate-n8n.sh <N8N_API_URL> <N8N_API_KEY>
 
 set -e
