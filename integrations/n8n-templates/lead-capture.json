@@ -1,0 +1,59 @@
+{
+  "_template": "lead-capture",
+  "_description": "Universal lead capture: website form → Supabase → pain-point segmentation → brand-specific welcome email. Pass brand_id as parameter.",
+  "_usedBy": "all 9 brands — pass brand_id as parameter",
+  "name": "AGI-OS — Lead Capture & Nurture",
+  "nodes": [
+    {
+      "id": "webhook",
+      "type": "n8n-nodes-base.webhook",
+      "name": "Form Submission",
+      "parameters": {
+        "path": "agi-os/lead",
+        "method": "POST"
+      },
+      "_note": "POST body: { brand_id, name, email, company, pain_point, source }"
+    },
+    {
+      "id": "supabase-insert",
+      "type": "n8n-nodes-base.supabase",
+      "name": "Store Lead",
+      "parameters": {
+        "projectUrl": "https://utuwsfqssuwkgmgyigwx.supabase.co",
+        "table": "leads",
+        "operation": "insert"
+      }
+    },
+    {
+      "id": "load-brand",
+      "type": "n8n-nodes-base.httpRequest",
+      "name": "Fetch Brand Context",
+      "parameters": {
+        "url": "https://raw.githubusercontent.com/digitalravagers/experiment/main/brands/={{$json.brand_id}}/BRAND.md",
+        "method": "GET"
+      }
+    },
+    {
+      "id": "tag-segment",
+      "type": "n8n-nodes-base.code",
+      "name": "Segment by Pain Point",
+      "_note": "Routes to appropriate email sequence based on pain_point field"
+    },
+    {
+      "id": "email-day1",
+      "type": "n8n-nodes-base.openAi",
+      "name": "Generate Welcome Email",
+      "parameters": {
+        "prompt": "Brand context:\n{{$node['Fetch Brand Context'].json.data}}\n\nWrite a welcome email for a new lead. Name: {{$json.name}}. Pain point: {{$json.pain_point}}. Match the brand voice from the context above."
+      }
+    },
+    {
+      "id": "send-email",
+      "type": "n8n-nodes-base.gmail",
+      "name": "Send Welcome Email",
+      "parameters": {
+        "_note": "Uses subject/body from the Generate Welcome Email node"
+      }
+    }
+  ]
+}
